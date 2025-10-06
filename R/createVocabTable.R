@@ -120,7 +120,7 @@ createVocabTable <-
                 pg13::write_table(conn = conn,
                                  schema = writeDatabaseSchema,
                                  table_name = vocabularyTable,
-                                 .data = processedVocabulary)
+                                 data = processedVocabulary)
 
         }
 
