@@ -112,12 +112,12 @@ createVocabTable <-
                                       ingredient_combination)
 
 
-                pg13::dropTable(conn = conn,
+                pg13::drop_table(conn = conn,
                                 schema = writeDatabaseSchema,
                                 tableName = vocabularyTable)
 
 
-                pg13::writeTable(conn = conn,
+                pg13::write_table(conn = conn,
                                  schema = writeDatabaseSchema,
                                  tableName = vocabularyTable,
                                  .data = processedVocabulary)
