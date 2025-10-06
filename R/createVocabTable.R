@@ -93,7 +93,7 @@ createVocabTable <-
                                                                                          " and "),
                                                 ingredient_combination)) %>%
                         dplyr::group_by(regimen_id) %>%
-                        rubix::arrange_by_nchar(nchar_col = ingredient_combination) %>%
+                        rubix::arrange_by_nchar(.,ingredient_combination) %>%
                         dplyr::filter(dplyr::row_number() == 1) %>%
                         dplyr::ungroup() %>%
                         rubix::arrange_by_nchar(regimen_name) %>%
